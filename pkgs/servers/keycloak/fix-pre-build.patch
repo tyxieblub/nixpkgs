@@ -1,0 +1,11 @@
+--- kc.sh	2024-09-25 19:23:23.528494280 +0200
++++ kc.sh-fixed	2024-09-25 19:29:35.031429681 +0200
+@@ -67,7 +67,7 @@
+       *)
+           OPT=$(esceval "$1")
+           case "$1" in
+-            start-dev) CONFIG_ARGS="$CONFIG_ARGS --profile=dev $1";;
++            start-dev) PRE_BUILD=false CONFIG_ARGS="$CONFIG_ARGS --profile=dev $1";;
+             -D*) SERVER_OPTS="$SERVER_OPTS ${OPT}";;
+             *) case "$1" in
+                  --optimized | --help | --help-all | -h) PRE_BUILD=false;;

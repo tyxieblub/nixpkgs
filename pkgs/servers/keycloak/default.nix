@@ -31,6 +31,9 @@ in stdenv.mkDerivation rec {
     # Make home.dir and config.dir configurable through the
     # KC_HOME_DIR and KC_CONF_DIR environment variables.
     ./config_vars.patch
+    # start-dev should not try to build
+    # as it is done during installation
+    ./fix-pre-build.patch
   ];
 
   buildPhase = ''
