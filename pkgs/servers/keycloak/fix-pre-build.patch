@@ -1,5 +1,7 @@
---- kc.sh	2024-09-25 19:23:23.528494280 +0200
-+++ kc.sh-fixed	2024-09-25 19:29:35.031429681 +0200
+diff --git a/quarkus/dist/src/main/content/bin/kc.sh b/quarkus/dist/src/main/content/bin/kc.sh
+index d7be862cde..16f9aa78e0 100644
+--- a/bin/kc.sh
++++ b/bin/kc.sh
 @@ -67,7 +67,7 @@
        *)
            OPT=$(esceval "$1")
